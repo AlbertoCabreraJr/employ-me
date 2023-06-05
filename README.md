@@ -1,14 +1,6 @@
-# Expo Router Example
+# Job Platform Mobile App
+This project is a mobile application that allows users to search and apply for jobs. It is developed using React Native Expo, providing a seamless experience across various platforms such as Android and iOS.
 
-Use [`expo-router`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.
+## Project Overview
+The Job Platform Mobile App enables users to access a myriad of job listings, conveniently from their mobile devices. It offers a smooth, interactive interface that users can utilize to look for opportunities fitting their qualifications and interests. The app not only displays job openings, but also provides detailed information about each position, including company profiles, job descriptions, and requirements.
 
-## 🚀 How to use
-
-```sh
-npx create-expo-app -e with-router
-```
-
-## 📝 Notes
-
-- [Expo Router: Docs](https://expo.github.io/router)
-- [Expo Router: Repo](https://github.com/expo/router)
