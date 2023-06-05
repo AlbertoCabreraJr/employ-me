@@ -10,7 +10,8 @@
     "build:dev-android": "eas build --profile apk --platform android",
     "build:dev-ios": "eas build --profile development-simulator --platform android",
     "test": "jest",
-    "dev:test": "jest -o --watch --coverage=false"
+    "dev:test": "jest -o --watch --coverage=false",
+    "dev:e2e": "maestro test e2e/"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.18.1",

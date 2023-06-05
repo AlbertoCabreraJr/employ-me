@@ -13,6 +13,9 @@
     },
     "android": {
       "package": "com.ajcabrera00.jobplatform"
+    },
+    "ios": {
+      "bundleIdentifier": "com.ajcabrera00.jobplatform"
     }
   }
 }

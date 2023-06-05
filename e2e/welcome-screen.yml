@@ -1,0 +1,21 @@
+appId: host.exp.Exponent
+---
+- launchApp:
+    appId: host.exp.Exponent
+
+- openLink: exp://127.0.0.1:19000
+
+- assertVisible: 'Hello Alberto'
+- tapOn:
+    id: 'searchInput'
+- inputText: 'react native developer'
+
+- tapOn:
+    id: 'search'
+- tapOn:
+    id: 'search'
+
+- waitForAnimationToEnd:
+    timeout: 5000
+
+- assertVisible: 'Job Opportunities'

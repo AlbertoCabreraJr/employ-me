@@ -4,7 +4,13 @@ import { SIZES } from '../../../constants'
 
 import styles from './tabs.style'
 
-const TabButton = ({ name, activeTab, onHandleSearchType }) => {
+type TabButtonProps = {
+  name: string
+  activeTab: string
+  onHandleSearchType: () => void
+}
+
+const TabButton = ({ name, activeTab, onHandleSearchType }: TabButtonProps) => {
   return (
     <TouchableOpacity style={styles.btn(name, activeTab)} onPress={onHandleSearchType}>
       <Text style={styles.btnText(name, activeTab)}>{name}</Text>
@@ -12,7 +18,13 @@ const TabButton = ({ name, activeTab, onHandleSearchType }) => {
   )
 }
 
-const Tabs = ({ tabs, activeTab, setActiveTab }) => {
+type TabsProps = {
+  tabs: []
+  activeTab: string
+  setActiveTab: any
+}
+
+const Tabs = ({ tabs, activeTab, setActiveTab }: TabsProps) => {
   return (
     <View style={styles.container}>
       <FlatList

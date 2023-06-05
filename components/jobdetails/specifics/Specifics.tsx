@@ -3,13 +3,18 @@ import { View, Text } from 'react-native'
 
 import styles from './specifics.style'
 
-const Specifics = ({ title, points }) => {
+type SpecificsProps = {
+  title: string
+  points: any
+}
+
+const Specifics = ({ title, points }: SpecificsProps) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}:</Text>
 
       <View style={styles.pointsContainer}>
-        {points.map((item, index) => {
+        {points.map((item: any, index: number) => {
           return (
             <View style={styles.pointWrapper} key={item + index}>
               <Text style={styles.pointDot} />
