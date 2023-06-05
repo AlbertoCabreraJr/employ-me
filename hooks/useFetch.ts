@@ -4,10 +4,10 @@ import { RAPID_API_KEY } from '@env'
 
 const rapidApiKey = RAPID_API_KEY
 
-const useFetch = (endpoint, query) => {
+const useFetch = (endpoint: string, query: any) => {
   const [data, setData] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState(null)
+  const [error, setError] = useState<any>(null)
 
   const options = {
     method: 'GET',

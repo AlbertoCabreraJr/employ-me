@@ -1,0 +1,27 @@
+name: Build and Submit Job Platform App
+on:
+  workflow_run:
+    workflows: ['Run Tests']
+    types:
+      - completed
+    branches:
+      - master
+jobs:
+  build:
+    name: Build and Submit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: npm
+      - name: Setup Expo and EAS
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+      - name: Install dependencies
+        run: npm ci
+      - name: Build on EAS
+        run: eas build --platform all --non-interactive --auto-submit
